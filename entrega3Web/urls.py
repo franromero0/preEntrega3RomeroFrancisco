@@ -49,7 +49,7 @@ urlpatterns = [
     path('resultadosHamburguesa/', resultado_busqueda_burger_nombre),
     path('buscarBebida/', busqueda_bebida_nombre),
     path('resultadosBebida/', resultado_busqueda_bebida_nombre),
-    path('buscarSugerencia/', busqueda_sugerencia),
+    path('buscarSugerencia/', busqueda_sugerencia, name="buscar_sugerencia"),
     path('resultadosSugerencia/', resultado_busqueda_sugerencia),
     
 ]

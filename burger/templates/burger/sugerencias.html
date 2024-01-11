@@ -8,7 +8,7 @@
          
             <h2 class="section-heading text-uppercase"><a class="nav-link" href="{% url 'recomendaciones' %}">Sugerencias</a> </h2>   <!-- BOTON QUE TIENE QUE REDIRIGIR A LAS VALORACIONES FORMS-->
             <h3 class="section-subheading text-muted"><a class="nav-link" href="{% url 'recomendaciones' %}">Aquí encontraras las diferentes sugerencias que los clientes han brindado <br> <br><u>¡Participa por grandes descuentos haciendo la tuya!</u></a></h3>
-        
+            <h3 class="section-subheading text-muted"><a class="nav-link" href="{% url 'buscar_sugerencia' %}">Busca entre las sugerencias en la DB</a></h3>
         </div>
         <div class="row">
             {% for x in sugerencias %}

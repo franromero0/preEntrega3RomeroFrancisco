@@ -12,19 +12,14 @@ def inicio(request):
 # Vistas para ver los productos creados de la empresa
 
 def ver_hamburguesas(request):
-    
     return render(request, "burger/hamburguesas.html")
 
 
 def ver_bebidas(request):
-    
     return render(request, "burger/bebidas.html")
 
 def ver_combos(request):
       return render(request, "burger/combos.html")
-
-
-
 
 
 
@@ -47,7 +42,6 @@ def pedidos(request ):
         return render(request, "burger/pedido_realizado.html")
         
     else:
-    
          return render(request, "burger/pedidos.html")
      
 # Vista para que los clientes realicen una devolucion con respecto a la comida del momento --- Diferente a sugerencia    
@@ -86,7 +80,8 @@ def realizar_sugerencia(request):
                                              recomendacion=info["recomendacion"]
                                              )
             nueva_sugerencia.save()
-            return render(request, "burger/sugerencias.html")
+            sugerencias_totales = Recomendacion.objects.all()
+            return render(request, "burger/sugerencias.html", {"sugerencias":sugerencias_totales})
         
     else:
             formulario = RecomendacionFormulario()
@@ -164,7 +159,7 @@ def resultado_busqueda_bebida_nombre(request):
 
 
 
-#Buscar sugerencias especificas en la DB
+#Buscar sugerencias especificas en la DB por nombre o palabra clave
 
 
 def busqueda_sugerencia(request):
@@ -185,15 +180,6 @@ def resultado_busqueda_sugerencia(request):
     else:
         return render(request, "burger/busqueda_sugerencia.html")
 
-# Busqueda por palabra clave en la DB 
+ 
 
 
-
-"""def resultado_busqueda_sugerencia_palabra(request):
-    if request.method=="GET":
-        palabra_busqueda = request.GET["busqueda__palabra_sugerencia"]
-        resultados = Recomendacion.objects.filter(recomendacion__icontains=palabra_busqueda)
-    
-        return render(request, "burger/resultados_busquedaHamburguesa.html", {"sugerencias": resultados})
-    else:
-        return render(request, "burger/busqueda_sugerencia.html")"""
