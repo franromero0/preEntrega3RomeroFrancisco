@@ -35,7 +35,7 @@ En la misma podemos encontrar las consignas necesitadas para el proyecto en:
 
 
 
-Espero que le guste y le sea de utilidad, desde ya. Muchas gracias!
+Espero que le guste y que el readme le sea de utilidad, desde ya. Muchas gracias!
                                     
 
                                             
