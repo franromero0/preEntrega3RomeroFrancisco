@@ -14,9 +14,13 @@ En la misma podemos encontrar las consignas necesitadas para el proyecto en:
                   Los mismos tienen las siguientes funcionalidades:
                                                                     - Hamburguesas: Para agregar hamburguesas a la DB.
                                                                     - Bebidas: idem
-                                                                    - Pedido: Realizar el pedido de la hamburguesa que se almacenara en la DB.
+                                                                    - Pedido: Realizar el pedido de la hamburguesa que se almacenara en la DB. 
                                                                     - Reseña: La reseña esta enfocada en intentar obtener un feedback del cliente y tener en cuenta la post-venta.
+                                                                              Tiene una vista donde podemos apreciar las diferentes valoraciones o reseñas de los clientes que se actualizara cada vez que agreguen datos.
+                                                                                No está limitada la cantidad de valoraciones que apareceran en la view, pero de seguir con este proyecto se tendrá en cuenta.
+                                                                              
                                                                     - Sugerencias: Dentro del Footer y dentro de algunos urls el cliente puede acceder y dejar una sugerencia a la empresa.
+                                                                                  Tambien tendra una vista para ver las diferentes sugerencias 
                                                                     
                 - Busqueda de datos: En algunos urls tendremos la opcion para buscar datos.
                   Los mismos se encuentran en:
