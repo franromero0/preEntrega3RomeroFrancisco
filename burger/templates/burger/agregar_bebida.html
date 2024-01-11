@@ -1,0 +1,29 @@
+{% extends "burger/base_light.html" %}
+
+
+{% block contenido_clientes %}
+<section class="page-section bg-light" id="opiniones">
+    <div class="container">
+        <div class="text-center">
+         
+            <h2 class="section-heading text-uppercase"><a class="nav-link" href="">Puedes agregar una bebida a la base de datos (solo administradores)</a> </h2>   <!-- BOTON QUE TIENE QUE REDIRIGIR A LAS VALORACIONES FORMS-->
+            <h3 class="section-subheading text-muted"><a class="nav-link" href=""> <br> <br><u>¡Animate y haz la tuya!</u></a></h3>
+        
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="team-member">
+                  <form action="" method="POST"> {% csrf_token %}
+                    {{mi_formu.as_p}}
+                    <input type="submit" value="Guardar">
+                            </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center"><p class="large text-muted"> Mantener a nuestros clientes satisfechos es nuestra misión</p></div>
+           
+        </div>
+    </div>
+</section>
+{% endblock %}

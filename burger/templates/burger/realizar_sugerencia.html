@@ -1,0 +1,40 @@
+{% extends "burger/pedidos.html" %}
+	
+{% load static %}
+
+
+{% block titulo_formulario %}
+<h2 class="section-heading text-uppercase">¿Tienes una sugerencia para nosotros?</h2>
+    <h3 class="section-subheading text-muted">Somos una empresa que se mantiene en constante crecimiento. <br> Porfavor deja abajo cualquier tipo de sugerencia para mejorar nuestro servicio</h3>
+{% endblock %}
+
+{% block formulario %}
+
+     
+<form id="contactForm" method="post"> {% csrf_token %}
+    <div class="row align-items-stretch mb-5">
+        <div class="col-md-6">
+            <div class="form-group">
+            <h3 class="section-heading text-uppercase">Nombre: </h3>
+                {{mi_formu.nombre}} 
+                
+            </div>
+            <div class="form-group">
+                <h3 class="section-heading text-uppercase">e-mail: :</h3>
+                {{mi_formu.email}}
+                
+            </div>
+            <div class="form-group">
+                <h3 class="section-heading text-uppercase">Sugerencia: </h3>
+                
+                
+                    {{mi_formu.recomendacion}}
+
+     
+            </div>
+        </div>
+    </div>
+  
+    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase " id="submitButton" type="submit">Enviar sugerencia</button></div>
+</form>
+{% endblock %}

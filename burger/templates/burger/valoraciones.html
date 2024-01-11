@@ -1,0 +1,35 @@
+{% extends "burger/base_light.html" %}
+	
+{% load static %}
+{% block contenido_clientes %}
+<section class="page-section bg-light" id="opiniones">
+    <div class="container">
+        <div class="text-center">
+         
+            <h2 class="section-heading text-uppercase"><a class="nav-link" href="{% url 'resena' %}">Valoraciones de clientes</a> </h2>   <!-- BOTON QUE TIENE QUE REDIRIGIR A LAS VALORACIONES FORMS-->
+            <h3 class="section-subheading text-muted"><a class="nav-link" href="{% url 'resena' %}">Una vez terminada su hamburguesa algunos clientes vuelven a dejar su reseña para participar por grandes descuentos. <br> <br><u>¡Animate y haz la tuya!</u></a></h3>
+        
+        </div>
+        <div class="row">
+            {% for x in valoraciones %}
+            <div class="col-lg-4">
+                <div class="team-member">
+                  
+
+                    <h4>{{x.nombre}}</h4>
+                    <p class="text-muted">{{x.resena}}
+
+                    </p>
+                
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center"><p class="large text-muted"> Mantener a nuestros clientes satisfechos es nuestra misión</p></div>
+           
+        </div>
+    </div>
+</section>
+{% endblock %}

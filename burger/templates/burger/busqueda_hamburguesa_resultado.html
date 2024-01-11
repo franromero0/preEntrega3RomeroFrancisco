@@ -1,0 +1,29 @@
+{% extends "burger/busqueda.html" %}
+	
+{% load static %}
+
+{% block busqueda %}
+
+<div class="masthead-heading text-uppercase">¡Busca hamburguesas por nombre!</div>
+
+<form action="/resultadosHamburguesa/" method="GET" >
+
+    Ingresa el nombre de la hamburguesa: <input type="text" name="busqueda_hambur">
+    {% endblock %}
+
+
+    {% block contenido %}
+    <div class="col-lg-4" style="color: black;">
+    <h3>Resultados de la busqueda</h3>
+    {% if burgers %}
+    <ul>
+    {% for burger in burgers %}
+    <li><p><b>Nombre: </b>{{burger.nombre}}</p></li>
+    <li><p><b>Descripcion: </b>{{burger.descripcion}}</p></li>
+    <li><p><b>Precio: $</b>{{burger.precio}}</p></li>
+    {% endfor %}
+                    </ul>
+    {% endif %}
+    </div>
+
+    {% endblock %}

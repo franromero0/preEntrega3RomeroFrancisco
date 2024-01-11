@@ -1,0 +1,29 @@
+{% extends "burger/busqueda.html" %}
+	
+{% load static %}
+
+{% block busqueda %}
+
+<div class="masthead-heading text-uppercase">¡Busca bebidas por nombre!</div>
+
+<form action="/resultadosBebida/" method="GET" >
+
+    Ingresa el nombre de la bebida: <input type="text" name="busqueda_bebida">
+    {% endblock %}
+
+
+    {% block contenido %}
+    <div class="col-lg-4" style="color: black;">
+    <h3>Resultados de la busqueda</h3>
+    {% if bebidas %}
+    <ul>
+    {% for bebida in bebidas %}
+    <li><p><b>Nombre: </b>{{bebida.nombre}}</p></li>
+    <li><p><b>Descripcion: </b>{{bebida.descripcion}}</p></li>
+    <li><p><b>Precio: $</b>{{bebida.precio}}</p></li>
+    {% endfor %}
+                    </ul>
+    {% endif %}
+    </div>
+
+    {% endblock %}

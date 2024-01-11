@@ -1,0 +1,218 @@
+{% extends "burger/prod.html" %}
+	
+{% load static %}
+
+{% block title %}
+<title> Bebidas y Tragos</title>
+{% endblock %}
+
+{% block tituloyMensaje %}
+<h2 class="section-heading text-uppercase">Bebidas disponibles</h2>
+<h3 class="section-subheading text-muted">Aquí encontraras toda nuestra gran variedad de bebidas y tragos elaborados por la casa</h3>
+<a href="{% url 'agregar bebidas' %}"><h4 class="section-subheading text-muted"> Agregar bebida </h4></a>
+<a href="/buscarBebida/"><h4 class="section-subheading text-muted"> Buscar bebidas por nombre</h4></a>
+<a href="/buscarBebida/"><button>   Buscar    </button></a>
+
+<h1></h1>
+{% endblock %}
+
+
+
+{% block producto1 %}        <!-- Cada block de productos tendra en su interior la imagen, El nombre y pequeñisima descripcion ITEM 1-->
+<img class="img-fluid" src="{% static 'burger/assets/img/bebidas/1.jpg' %}" alt="..." />
+</a>
+<div class="portfolio-caption">
+<div class="portfolio-caption-heading">Limonada Refrescante</div>
+<div class="portfolio-caption-subheading text-muted">Refrescante mezcla de limón con un toque de menta.</div>
+</div>
+{% endblock %}
+
+
+<!-- Cada block de productos tendra en su interior la imagen, El nombre y pequeñisima descripcion ITEM 2-->
+{% block producto2 %}  
+<img class="img-fluid" src="{% static 'burger/assets/img/bebidas/2.webp' %}" alt="..." />
+</a>
+<div class="portfolio-caption">
+<div class="portfolio-caption-heading">Tropical</div>
+<div class="portfolio-caption-subheading text-muted">Explosión de sabores tropicales en cada sorbo.</div>
+</div>
+{% endblock %}
+
+<!-- Cada block de productos tendra en su interior la imagen, El nombre y pequeñisima descripcion ITEM 3-->
+{% block producto3 %}     
+<img class="img-fluid" src="{% static 'burger/assets/img/bebidas/3.jpg' %}" alt="..." />
+</a>
+<div class="portfolio-caption">
+<div class="portfolio-caption-heading">Energizante Cítrico</div>
+<div class="portfolio-caption-subheading text-muted">Bebida revitalizante con un toque cítrico.</div>
+</div>
+{% endblock %}
+
+ <!-- Cada block de productos tendra en su interior la imagen, El nombre y pequeñisima descripcion ITEM 4-->
+{% block producto4 %}     
+<img class="img-fluid" src="{% static 'burger/assets/img/bebidas/4.jpg' %}" alt="..." />
+</a>
+<div class="portfolio-caption">
+<div class="portfolio-caption-heading">Mojito de Menta</div>
+<div class="portfolio-caption-subheading text-muted">Frescura única de menta y cítricos.</div>
+</div>
+{% endblock %}
+
+<!-- Cada block de productos tendra en su interior la imagen, El nombre y pequeñisima descripcion ITEM 5-->
+{% block producto5 %}  
+<img class="img-fluid" src="{% static 'burger/assets/img/bebidas/5.jpg' %}" alt="..." />
+</a>
+<div class="portfolio-caption">
+<div class="portfolio-caption-heading">Gaseosa Clásica</div>
+<div class="portfolio-caption-subheading text-muted">La opción burbujeante y clásica.</div>
+</div>
+{% endblock %}
+
+<!-- Cada block de productos tendra en su interior la imagen, El nombre y pequeñisima descripcion ITEM 6-->
+{% block producto6 %} 
+<img class="img-fluid" src="{% static 'burger/assets/img/bebidas/6.png' %}" alt="..." />
+</a>
+<div class="portfolio-caption">
+<div class="portfolio-caption-heading">Gaseosa de Naranja</div>
+<div class="portfolio-caption-subheading text-muted">Exquisita gaseosa con sabor a naranja.</div>
+</div>
+{% endblock %}
+
+
+
+<!-- MODELS -->
+<!-- Esto es lo que el usuario verá cuando haga click en algun producto -->
+
+<!-- PRODUCT MODEL 1 -->
+{% block modal1 %}
+<h2 class="text-uppercase">Project Name</h2>
+<p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+<img class="img-fluid d-block mx-auto" src="{% static 'burger/assets/img/bebidas/1.jpg' %}" alt="..." />
+<p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+<ul class="list-inline">
+    <li>
+        <strong>Client:</strong>
+        Threads
+    </li>
+    <li>
+        <strong>Category:</strong>
+        Illustration
+    </li>
+</ul>
+<button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+    <i class="fas fa-xmark me-1"></i>
+    Close Project
+</button>
+{% endblock %}
+
+
+<!-- PRODUCT MODEL 2 -->
+{% block model2 %}
+<h2 class="text-uppercase">Project Name</h2>
+<p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+<img class="img-fluid d-block mx-auto" src="{% static 'burger/assets/img/bebidas/2.webp' %}" alt="..." />
+
+<p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+<ul class="list-inline">
+<li>
+    <strong>Client:</strong>
+    Explore
+</li>
+<li>
+    <strong>Category:</strong>
+    Graphic Design
+</li>
+</ul>
+<button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+<i class="fas fa-xmark me-1"></i>
+Close Project
+</button>
+{% endblock %}
+
+<!-- PRODUCT MODEL 3 -->
+{% block modal3 %}
+<h2 class="text-uppercase">Project Name</h2>
+<p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+<img class="img-fluid d-block mx-auto" src="{% static 'burger/assets/img/bebidas/3.jpg' %}" alt="..." />
+<p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+<ul class="list-inline">
+    <li>
+        <strong>Client:</strong>
+        Finish
+    </li>
+    <li>
+        <strong>Category:</strong>
+        Identity
+    </li>
+</ul>
+<button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+    <i class="fas fa-xmark me-1"></i>
+    Close Project
+</button>
+{% endblock %}
+
+<!-- PRODUCT MODEL 4 -->
+{% block modal4 %}
+<h2 class="text-uppercase">Project Name</h2>
+<p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+<img class="img-fluid d-block mx-auto" src="{% static 'burger/assets/img/bebidas/4.jpg' %}" alt="..." />
+<p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+<ul class="list-inline">
+    <li>
+        <strong>Client:</strong>
+        Lines
+    </li>
+    <li>
+        <strong>Category:</strong>
+        Branding
+    </li>
+</ul>
+<button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+    <i class="fas fa-xmark me-1"></i>
+    Close Project
+</button>
+{% endblock %}
+
+<!-- PRODUCT MODEL 5 -->
+{% block modal5 %}
+<h2 class="text-uppercase">Project Name</h2>
+<p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+<img class="img-fluid d-block mx-auto" src="{% static 'burger/assets/img/bebidas/5.jpg' %}" alt="..." />
+<p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+<ul class="list-inline">
+    <li>
+        <strong>Client:</strong>
+        Southwest
+    </li>
+    <li>
+        <strong>Category:</strong>
+        Website Design
+    </li>
+</ul>
+<button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+    <i class="fas fa-xmark me-1"></i>
+    Close Project
+</button>
+{% endblock %}
+
+<!-- PRODUCT MODEL 6 -->
+{% block modal6 %}
+<h2 class="text-uppercase">Project Name</h2>
+<p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+<img class="img-fluid d-block mx-auto" src="{% static 'burger/assets/img/bebidas/6.png' %}" alt="..." />
+<p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+<ul class="list-inline">
+    <li>
+        <strong>Client:</strong>
+        Window
+    </li>
+    <li>
+        <strong>Category:</strong>
+        Photography
+    </li>
+</ul>
+<button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+    <i class="fas fa-xmark me-1"></i>
+    Close Project
+</button>
+{% endblock %}

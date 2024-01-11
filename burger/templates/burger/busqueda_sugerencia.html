@@ -1,0 +1,18 @@
+{% extends "burger/busqueda.html" %}
+	
+{% load static %}
+
+{% block busqueda %}
+
+<div class="masthead-heading text-uppercase">¡Busca una sugerencia en especifico!</div>
+
+<form action="/resultadosSugerencia/" method="GET" >
+
+    <p style="color: black;">Ingresa el nombre de la persona que realiza sugerencias: <input type="text" name="busqueda__nombre_sugerencia">
+    <input type="submit" value="Buscar"> </p>
+    <br>
+
+    <form action="/resultadosSugerencia/" method="GET" >
+
+        <p style="color: black;"> Buscar por alguna palabra entre las sugerencias: <input type="text" name="busqueda__palabra_sugerencia"> </p>
+    {% endblock %}

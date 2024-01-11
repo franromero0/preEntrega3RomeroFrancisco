@@ -1,0 +1,12 @@
+{% extends "burger/busqueda.html" %}
+	
+{% load static %}
+
+{% block busqueda %}
+
+<div class="masthead-heading text-uppercase">¡Busca hamburguesas por nombre!</div>
+
+<form action="/resultadosHamburguesa/" method="GET" >
+
+    Ingresa el nombre de la hamburguesa: <input type="text" name="busqueda_hambur">
+    {% endblock %}
